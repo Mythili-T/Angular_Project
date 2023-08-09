@@ -1,0 +1,184 @@
+<app-admin-header></app-admin-header>
+<div class="body-content">
+
+  <div class="imagess">
+    <div class="imagess">
+      <img [src]="envirnomentfile.backgroundImage"  alt="images">
+    </div>
+  </div>
+  <!-- <img id="logoimage" src="../Static/images/My project.png" onmouseover="logobig(this)" onmouseout="logosmall(this)"
+      alt="image" width="70px" height="70px"><br><br><br> -->
+  <h1><br><br>BUILD EDUCATION<br>&nbsp;&nbsp;WEBSITE USING<br>&nbsp;&nbsp;&nbsp;</h1>
+  <div class="span">
+    <span>Studyard</span>
+
+  </div>
+  <div class="cap" style="margin-top: -2%;font-size: 25px;margin-left: 28%;">
+    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+
+  </div>
+  <!--
+  <h2> WELCOMES YOU !...</h2><br><br><br>
+  <p><b>" Today is a great day to learn something new !..."</b></p><br><br><br><br><br><br><br> -->
+</div>
+<br><br><br><br><br><br>
+<div class="content">
+<main>
+  <div class="cards">
+    <div class="card-single" style="text-justify: auto;">
+      <div>
+        <h2>No. of Students</h2>
+        <h2>{{studentCount?.length}}</h2>
+      </div>
+      <span class="fa fa-graduation-cap" style="color:rgb(238, 238, 41);"></span>
+      <div>
+
+        <span class="fa fa-group"></span>
+      </div>
+    </div>
+
+    <div class="card-single">
+      <div>
+        <h2>No. of Faculty</h2>
+        <h2>{{teacherCount?.length}}</h2>
+      </div>
+      <div>
+        <span class="fa fa-user"></span>
+      </div>
+    </div>
+    <div class="card-single">
+      <div>
+        <h2>Departments</h2>
+        <h2>4</h2>
+      </div>
+      <div>
+        <span class="fa fa-outdent"></span>
+      </div>
+    </div>
+    <div class="card-single">
+      <div>
+        <h2>Subjects</h2>
+        <h2>{{subjectCount?.length}}</h2>
+      </div>
+      <div>
+
+        <span class="fa-solid fa-book"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex">
+    <div class="cse">
+      <h1>CSE</h1>
+      <div class="br">
+      </div>
+      <div class="break1"></div>
+    </div>
+
+    <div class="classes">
+      <div class="class">
+        <h2>Notes - {{ cseNotes()}}</h2>
+      </div>
+      <div class="class">
+        <h2>Syllabus - {{cseMaterialsCount?.length}} </h2>
+        <h2></h2>
+      </div>
+      <div class="class">
+        <h2>Video Links - {{ cseNotes()}}</h2>
+        <h2></h2>
+      </div>
+      <div class="class">
+        <h2>Old Question Papers - {{csequestionCount()}}</h2>
+        <h2></h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex">
+    <div class="cse">
+      <h1>ECE</h1>
+      <div class="br">
+      </div>
+      <div class="break2"></div>
+    </div>
+
+    <div class="classes">
+      <div class="class">
+        <h2>Notes - {{ eceNotes()}}</h2>
+        <h2></h2>
+      </div>
+      <div class="class">
+        <h2>Syllabus - {{eceMaterialsCount?.length}}</h2>
+        <h2></h2>
+      </div>
+      <div class="class">
+        <h2>Video Links -{{ eceNotes()}}</h2>
+        <h2></h2>
+      </div>
+      <div class="class">
+        <h2>Old Question Papers - {{ ecequestionCount()}}</h2>
+        <h2></h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex">
+    <div class="cse">
+      <h1>EEE</h1>
+      <div class="br">
+      </div>
+      <div class="break3"></div>
+    </div>
+
+    <div class="classes">
+      <div class="class">
+        <h2>Notes - {{eeeNotes()}}</h2>
+        <h2></h2>
+      </div>
+      <div class="class">
+        <h2>Syllabus - {{eeeMaterialsCount?.length}} </h2>
+        <h2></h2>
+      </div>
+      <div class="class">
+        <h2>Video Links - {{eeeNotes()}}</h2>
+        <h2></h2>
+      </div>
+      <div class="class">
+        <h2>Old Question Papers -{{eeequestionCount()}}</h2>
+        <h2></h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex">
+    <div class="cse">
+      <h1> &nbsp;&nbsp;IT</h1>
+      <div class="br">
+      </div>
+      <div class="break4"></div>
+    </div>
+
+    <div class="classes">
+      <div class="class">
+        <h2>Notes -  {{ITNotes()}}</h2>
+        <h2></h2>
+      </div>
+      <div class="class">
+        <h2>Syllabus - {{ITMaterialsCount?.length}}</h2>
+        <h2></h2>
+      </div>
+      <div class="class">
+        <h2>Video Links -{{ITNotes()}}</h2>
+        <h2></h2>
+      </div>
+      <div class="class">
+        <h2>Old Question Papers -  {{ITquestionCount()}}</h2>
+        <h2></h2>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br>
+</main>
+
+</div>

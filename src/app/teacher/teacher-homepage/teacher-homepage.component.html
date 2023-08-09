@@ -1,0 +1,124 @@
+<app-teacher-header></app-teacher-header>
+<!-- body of the page starts -->
+
+<!-- pop-up-session starts-->
+<br><br>
+<div class="pop-up-container" *ngIf="popup">
+  <i class="fas fa-times" (click)="closepopup()"></i>
+  <div class="pop-up-content">
+  <h1>Hai !! Studyard Welcomes You <i class="fa-sharp fa-solid fa-face-laugh"></i></h1><br>
+  <h2 class="heading">“We learn from failure, not from success!”</h2>
+  <br><h3>Here few notes are uploded <br><br> Please view the notes and enjoy reading</h3>
+</div>
+</div>
+
+<!-- pop-up-session endss-->
+
+
+<div class="body-content">
+
+  <div class="imagess">
+    <div class="imagess">
+      <img [src]="environmentfile.backgroundImage"  alt="images">
+    </div>
+  </div>
+  <h1><br><br>BUILD EDUCATION<br>&nbsp;&nbsp;WEBSITE USING<br>&nbsp;&nbsp;&nbsp;</h1>
+  <div class="span">
+    <span>Studyard</span>
+
+  </div>
+  <div class="cap" style="margin-top: -2%;font-size: 25px;margin-left: 28%;">
+    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+
+  </div>
+
+</div>
+<!-- body of the page ends -->
+
+<!-- <div class="break"></div><br><br><br></div> --><br><br><br><br><br><br><br>
+<p class="quotes"><b>" <i class="fa-solid fa-users"></i>We can able to learn together even when we are apart !!..."</b>
+</p><br><br>
+
+<!-- details section -->
+<p class="quotes" style="margin-left: 250px;"><b>"Our Vision and Mission !...."</b><br><br>
+<div class="vision-mission">
+
+  <div class="vision">
+    <img [src]="environmentfile.visionImage" width="28%" height="28%" alt="image">
+
+    <div class=" vission-msg">
+      <h2> Our Mission </h2>
+      &nbsp;&nbsp;&nbsp; <p>{{ environmentfile.visionContent}}</p>
+    </div>
+  </div>
+  <div class="mission">
+    <img [src]="environmentfile.missionImage" width="28%" height="28%" alt="image">
+    <div class="mission-msg">
+      <h2> Our Vision </h2>
+      &nbsp;&nbsp;&nbsp;<p> {{environmentfile.missionContent}}</p>
+    </div>
+  </div>
+</div>
+<br><br>
+<p class="quotes"><b>"A teacher takes a hand opens a mind & <i class="fa-solid fa-heart"></i> touches a heart
+    !..."</b></p><br><br><br><br>
+<div class="aboutadmin">
+  <div class="admin">
+    <img [src]="environmentfile.adminFriendlyImage" width="50%" height="50%" alt="images">
+
+    <h3>Admin friendly software</h3><br>
+    <p>
+      &nbsp;&nbsp;&nbsp;{{environmentfile.adminFriendlyContent}}
+    </p>
+  </div>
+  <div class="zero-stress">
+    <img [src]="environmentfile.zeroStressImage" width="50%" height="50%" alt="images">
+
+    <h3>Zero stress process</h3><br>
+    <p> &nbsp;&nbsp;&nbsp;{{environmentfile.zeroStressContent}}
+    </p>
+  </div>
+  <div class="frnd-interface">
+    <img [src]="environmentfile.friendlyTeachers" width="50%" height="50%" alt="images">
+    <h3>Friendly interface for teachers and students</h3><br>
+    <p> &nbsp;&nbsp;&nbsp; {{environmentfile. friendlyContent}}
+    </p>
+  </div>
+</div>
+
+<br><br><br><br>
+
+<section class="details-container">
+  <div class="icons">
+    <i class="fa-solid fa-user-graduate"></i>
+    <h3>{{environmentfile.studentsCount}}+</h3>
+    <p>Students</p>
+  </div>
+
+  <div class="icons">
+    <i class="fa-solid fa-chalkboard-user"></i>
+    <h3>{{environmentfile.teachersCount}}+</h3>
+    <p>Faculties</p>
+  </div>
+
+  <div class="icons">
+    <i class="fa-solid fa-bookmark"></i>
+    <h3>{{environmentfile.subjectsCount}}+</h3>
+    <p>Subjects</p>
+  </div>
+
+  <div class="icons">
+    <i class="fa-solid fa-book"></i>
+    <h3>{{environmentfile.notesCount}}+</h3>
+    <p> Notes</p>
+  </div>
+</section>
+
+<br><br><br><br><br>
+<app-teacher-footer></app-teacher-footer>
+
+
+
+
+
+<!-- body of the page ends -->

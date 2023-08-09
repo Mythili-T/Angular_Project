@@ -1,0 +1,45 @@
+<app-Header></app-Header>
+<!-- {{getMaterials|json}} -->
+<div class="department">
+  <h1 class="heading">{{ getUser.DepartmentFullform }}</h1>
+      <h2 class="sub-heading">{{getUser.Yearinwords}}</h2>
+</div>
+<div *ngFor="let item of getMaterials">
+
+  <div class="images-flex">
+    <div class="course-image">
+      <div class="images">
+        <img [src]="item.ImagesUrl" alt="image" id="peImg">
+      </div>
+      <div class="subject-title">
+       {{item.SubjectCode}}
+       {{item.SubjectName}}
+      </div>
+      <div class="current-year">
+        {{item.Yearnames}}
+      </div>
+    </div>
+
+
+    <div id="display" class="notes"><br><br>
+      <div class="videos">
+        <h2><button (click)="videostatus(item)">Video</button></h2>
+      </div>
+      <div class="videos">
+        <h2><button (click)="notesstatus(item)">Notes</button></h2>
+      </div>
+      <div class="videos">
+        <h2><button (click)="questionstatus(item)">Questions</button></h2>
+      </div>
+      <div class="videos">
+        <h2><button (click)="syllabusstauts(item)">Syllabus</button></h2>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+<br><br>
+
+
+  <app-footer></app-footer>

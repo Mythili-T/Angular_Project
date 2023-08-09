@@ -1,0 +1,146 @@
+<app-admin-header></app-admin-header>
+<h2>Student  Details</h2>
+<table>
+  <tr>
+    <th>Register No</th>
+    <th>Student Name </th>
+    <th>Phone Number</th>
+    <th>Department </th>
+    <th>Email Id </th>
+    <th>Year of Studying </th>
+    <th>Student Password</th>
+    <th>Delete User</th>
+  </tr><br>
+
+
+  <tr style="text-align: center;" *ngFor="let user Of getUser">
+    <td>{{user.registernovalue}}</td>
+    <td> {{user.namevalue}}</td>
+    <td> {{user.mobilevalue}}</td>
+    <td> {{user.department}}</td>
+    <td> {{user.emailvalue}}</td>
+    <td> {{user.year}}</td>
+    <td>{{user.passwordvalue}}</td>
+    <td><Button (click)="deleteData(user.id)">Delete</Button></td>
+  </tr><br>
+  </table><br><br>
+  <button id="add" (click)="update()">Add User</button>
+
+  <dialog class="body">
+    <form [formGroup]="registerForm" (ngSubmit)="updateProfile()">
+
+<br><br><br><br>
+      <div class="formreg">
+        <div class="register">
+          <div class="teacherBox1">
+            <span class="teacherdetails"> Register Number </span>
+            <input type="text" placeholder="Enter Your RollName" required formControlName="registernovalue"
+              pattern="^1\d{6}$"/>
+            <div *ngIf="registerForm.controls['registernovalue'].dirty" class="alert">
+              <p *ngIf="registerForm.controls['registernovalue'].errors?.['required']">
+                Register number should not be Empty
+              </p>
+              <p *ngIf="registerForm.controls['registernovalue'].errors?.['pattern']">
+                Enter a valid Register Number
+              </p>
+            </div>
+          </div>
+          <div class="teacherBox2">
+            <span class="teacherdetails"> Name </span>
+            <input type="text" required placeholder="Enter Your Name" autocomplete="off" formControlName="namevalue">
+            <div *ngIf="registerForm.controls['namevalue'].dirty" class="alert">
+              <p *ngIf="registerForm.controls['namevalue'].errors?.['required']">
+                User name should not be Empty
+              </p>
+              <p *ngIf="registerForm.controls['namevalue'].errors?.['pattern']">
+                Enter proper User Name
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="register">
+          <div class="teacherBox1">
+            <span class="teacherdetails"> Department </span>
+            <select id="Depart1" formControlName="department">
+              <option value="default" disabled>Select Department</option>">
+              <option value="CSE">CSE</option>
+              <option value="ECE">ECE</option>
+              <option value="EEE">EEE</option>
+              <option value="IT">IT</option>
+
+            </select>
+          </div>
+          <div class="teacherBox3">
+            <span class="teacherdetails"> Current Year </span>
+            <select id="Depart2" formControlName="year">
+              <option value="default" disabled>Select Year</option>
+              <option value="1">First</option>
+              <option value="2">Second</option>
+              <option value="3">Third</option>
+              <option value="4">Final</option>
+
+            </select>
+          </div>
+        </div>
+        <div class="register">
+          <div class="teacherBox4">
+            <span class="teacherdetails"> Email </span>
+            <input type="email" placeholder="Enter Your Email " required autocomplete="off" formControlName="emailvalue"/>
+            <div *ngIf="registerForm.controls['emailvalue'].dirty" class="alert">
+              <p *ngIf="registerForm.controls['emailvalue'].errors?.['required']">
+                EmailId should not be Empty
+              </p>
+              <p *ngIf="registerForm.controls['emailvalue'].errors?.['pattern']">
+                EmailId is in incorrect format
+              </p>
+            </div>
+          </div>
+
+
+          <div class="teacherBox5">
+            <span class="teacherdetails"> Phone Number </span>
+            <input type="text" placeholder="Enter Your phone number" autocomplete="off" formControlName="mobilevalue"/>
+            <div *ngIf="registerForm.controls['mobilevalue'].dirty" class="alert">
+              <p *ngIf="registerForm.controls['mobilevalue'].errors?.['required']">
+                Mobile Number should not be Empty
+              </p>
+              <p *ngIf="registerForm.controls['mobilevalue'].errors?.['pattern']">
+                Enter a valid Mobile Number
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="register">
+          <div class="teacherBox6">
+            <span class="teacherdetails">Password </span>
+            &nbsp; <input type="text" required placeholder="Enter Your password " formControlName="passwordvalue"
+              autocomplete="off" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" />
+            <div *ngIf="registerForm.controls['passwordvalue'].dirty" class="alert">
+              <p *ngIf="registerForm.controls['passwordvalue'].errors?.['required']">Password should not be Empty</p>
+              <p *ngIf="registerForm.controls['passwordvalue'].errors?.['pattern']">Password Must Contain
+                1Caps(A)-Num(1)-Symbol(@)</p>
+            </div>
+          </div>
+
+          <div class="teacherBox7">
+            <span class="teacherdetails"> Confirm Password </span>
+            <input type="password" required placeholder="Enter Your confrim password" autocomplete="off"
+              formControlName="confirmpasswordvalue" />
+            <div
+              *ngIf="registerForm.controls['confirmpasswordvalue'].invalid && registerForm.controls['confirmpasswordvalue'].dirty"
+              class="alert">
+              <p *ngIf="registerForm.controls['confirmpasswordvalue'].errors?.['required']">Confirm PW should not be
+                Empty</p>
+              <p *ngIf="registerForm.controls['confirmpasswordvalue'].errors?.['confirmPasswordValidate']">Confirm
+                Password Doesn't Match Password</p>
+            </div>
+          </div>
+        </div>
+        <div class="button">
+          <button id="save" [disabled]="!this.registerForm.valid"> Save</button>
+        </div>
+      </div>
+    </form>
+    <button  id="save1"(click)="close()">Close</button>
+  </dialog>

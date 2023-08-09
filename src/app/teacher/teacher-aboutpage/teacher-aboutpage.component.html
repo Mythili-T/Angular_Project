@@ -1,0 +1,157 @@
+<app-teacher-header/>
+<main>
+  <header>
+    <br><br><br><br>
+    <h1 class="heading1">YOURS STUDYARD</h1><br>
+    <h2 class="heading2">“We learn from failure, not from success!”</h2> <br>
+    <div class="about">
+      <div class="about-para">
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{environmentfile.aboutContent}}
+        </p>
+        <div class="about-images">
+          <img [src]="environmentfile.aboutPageBookImage" alt="images" />
+        </div>
+      </div>
+    </div>
+  </header>
+</main>
+<br /><br />
+<div class="whole-div">
+  <div class="study-material_div-1">
+    <div class="study-material_div-2">
+      <div class="study-material_div-3">
+        <img [src]="environmentfile.aboutMaterialImage" alt="edecofy-institute-software" />
+      </div>
+
+      <div class="process_header_main mt-3">
+        <div class="features_icon_box text-center">
+          <h5 class="text-capitalize">Study Materials</h5>
+        </div>
+
+        <ul class="list-style-1 m-0 p-0 pb-3">
+          <li>{{environmentfile.aboutMaterialContentList_1}}</li>
+
+          <li>{{environmentfile.aboutMaterialContentList_2}}</li>
+
+          <li>{{environmentfile.aboutMaterialContentList_3}}</li>
+
+          <li>{{environmentfile.aboutMaterialContentList_4}}</li>
+
+          <li>{{environmentfile.aboutMaterialContentList_5}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="study-material_div-1">
+    <div class="study-material_div-2">
+      <div class="study-material_div-3">
+        <img [src]="environmentfile.aboutSyllabusImage" alt="edecofy-institute-software" />
+      </div>
+
+      <div class="process_header_main mt-3">
+        <div class="features_icon_box text-center">
+          <h5 class="text-capitalize font-weight-bold mt-4 pb-2">
+            Syllabus Management
+          </h5>
+        </div>
+
+        <ul class="list-style-1 m-0 p-0 pb-3">
+          <li>{{environmentfile.aboutSyllabusContentList_1}}</li>
+
+          <li>{{environmentfile.aboutSyllabusContentList_2}}</li>
+
+          <li>{{environmentfile.aboutSyllabusContentList_3}}</li>
+
+          <li>{{environmentfile.aboutSyllabusContentList_4}}</li>
+
+          <li>{{environmentfile.aboutSyllabusContentList_5}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="whole-div">
+  <div class="study-material_div-1">
+    <div class="study-material_div-2">
+      <div class="study-material_div-3">
+        <img [src]="environmentfile.aboutExamImage" alt="edecofy-institute-software" />
+      </div>
+
+      <div class="process_header_main mt-3">
+        <div class="features_icon_box text-center">
+          <h5 class="text-capitalize font-weight-bold mt-4 pb-2">
+            Examination Management
+          </h5>
+        </div>
+
+        <ul class="list-style-1 m-0 p-0 pb-3">
+          <li>{{environmentfile. aboutExamContentList_1}}</li>
+
+          <li>{{environmentfile. aboutExamContentList_2}}</li>
+
+          <li>{{environmentfile. aboutExamContentList_3}}</li>
+
+          <li>{{environmentfile. aboutExamContentList_4}}</li>
+
+          <li>{{environmentfile. aboutExamContentList_5}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="study-material_div-1">
+    <div class="study-material_div-2">
+      <div class="study-material_div-3">
+        <img [src]="environmentfile.aboutManagementImage" alt="edecofy-institute-software" />
+      </div>
+
+      <div class="process_header_main mt-3">
+        <div class="features_icon_box text-center">
+          <h5 class="text-capitalize font-weight-bold mt-4 pb-2">
+            Student Management
+          </h5>
+        </div>
+
+        <ul class="list-style-1 m-0 p-0 pb-3">
+          <li>{{environmentfile. aboutManagementContentList_1}}</li>
+
+          <li>{{environmentfile. aboutManagementContentList_2}}</li>
+
+          <li>{{environmentfile. aboutManagementContentList_3}}</li>
+
+          <li>{{environmentfile. aboutManagementContentList_4}}</li>
+
+          <li>{{environmentfile. aboutManagementContentList_5}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<h1 class="teachers">Teachers with us !..</h1><br>
+<br>
+
+<section class="details-container">
+  <div class="icons">
+    <i class="fa-solid fa-chalkboard-user"></i><br>
+    <span>{{environmentfile. masteredproffessorCount}}</span>
+    <p>Mastered proffessor</p>
+  </div>
+
+  <div class="icons">
+    <i class="fa-solid fa-chalkboard-user"></i><br>
+    <span>{{environmentfile. doctratedproffessorCount}}</span>
+    <p>Doctrated Proffessor</p>
+  </div>
+
+  <div class="icons">
+    <i class="fa-solid fa-bookmark"></i><br>
+    <span>{{environmentfile.  certifiedproffessorCount}}</span>
+    <p>Certified Proffessor</p>
+  </div>
+</section>
+<br><br><br>
+<br><br>
+<app-teacher-footer></app-teacher-footer>

@@ -1,0 +1,65 @@
+<app-Header></app-Header><br>
+<!-- menu-bar ends -->
+<div class="contact-us">
+  <h1 class="heading">Contact Us</h1>
+  <!-- <h2 class="sub-heading">We are here to help You !!</h2> -->
+</div>
+<div class="contact-content">
+  <p>
+      {{ environmentfile.contactPageContent}}
+  </p>
+</div>
+<br /><br /><br />
+<div class="contact-container">
+  <br />
+  <div class="sub-container2">
+    <br />
+    <span class="info">Reach Us</span>
+    <div style="margin-bottom: 30px"></div>
+    <hr>
+    <div style="margin-bottom: 30px"></div>
+
+    <form action="" [formGroup]="registerForm" (ngSubmit)="submitForm()">
+      <label>Name <span class="sp">*</span></label><br />
+      <input class="inp" type="text" required  formControlName="namevalue" /><br /><br />
+      <div *ngIf="registerForm.controls['namevalue'].dirty" class="alert">
+        <p *ngIf="registerForm.controls['namevalue'].errors?.['required']">
+          User name should not be Empty
+        </p>
+        <p *ngIf="registerForm.controls['namevalue'].errors?.['pattern']">
+          Enter proper User Name
+        </p>
+      </div>
+      <label>College Email <span class="sp">*</span></label><br />
+      <input class="inp" type="email" required formControlName="emailvalue" /><br /><br />
+      <div *ngIf="registerForm.controls['emailvalue'].dirty" class="alert">
+        <p *ngIf="registerForm.controls['emailvalue'].errors?.['required']">
+          EmailId should not be Empty
+        </p>
+        <p *ngIf="registerForm.controls['emailvalue'].errors?.['pattern']">
+          EmailId is in incorrect format
+        </p>
+      </div>
+      <label>Whatsapp Number <span class="sp">*</span></label><br />
+      <input class="inp" type="text" required formControlName="mobilevalue" /><br /><br />
+      <div *ngIf="registerForm.controls['mobilevalue'].dirty" class="alert">
+        <p *ngIf="registerForm.controls['mobilevalue'].errors?.['required']">
+          Mobile Number should not be Empty
+        </p>
+        <p *ngIf="registerForm.controls['mobilevalue'].errors?.['pattern']">
+          Enter a valid Mobile Number
+        </p>
+      </div>
+
+      <label>Message <span class="sp">*</span></label><br />
+      <textarea rows="5" name="Message" class="inp" required formControlName="textvalue"> </textarea>
+      <div *ngIf="registerForm.controls['textvalue'].dirty" class="alert" style="margin-top: -1rem;" >
+        <p *ngIf="registerForm.controls['textvalue'].errors?.['required']">
+          Message should not be Empty
+        </p>
+      </div>
+      <input class="btnn" type="submit" value="Submit" id="submit-button" [disabled]="registerForm.invalid"/>
+    </form>
+  </div>
+</div><br><br><br><br>
+<app-footer></app-footer>
